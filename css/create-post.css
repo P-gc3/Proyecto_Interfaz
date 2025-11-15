@@ -1,0 +1,177 @@
+
+/*caja principal////////////*/
+.create-post {
+  max-width: 800px;
+  margin: 3.5rem auto;
+  padding: 2rem;
+  background-color: var(--blanco-Fondo);
+  border: 1px solid var(--borde-create-post);
+  border-radius: 10px;
+  box-shadow: var(--filter-menu-Sombra);
+}
+
+.create-post h2 {
+  font-size: 1.8rem;
+  font-weight: 200;
+  margin-bottom: 1.5rem;
+  color: var(--negro-azulado-Texto);
+}
+
+/* //////////combobox de categoria*/
+.category-select {
+  display:inline-block;
+  align-items: center;
+  background-color: var(--blanco-mas-claro-Fondo);
+  border-radius: 6px;
+  border: 1px solid var(--borde-create-post);
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.category-select select {
+  border: none;
+  background: var(--blanco-Fondo);
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  color: var(--negro-azulado-Texto);
+  outline: none;
+
+  border-radius: 6px;/*para redondear caja*/
+  appearance: none; /* quita estilos del navegador */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: auto; /* ajustar al contenido */
+  min-width: 200px; 
+  cursor: pointer;
+}
+
+.category-select option{
+    background: var(--blanco-mas-claro-Fondo);
+    color: var(--negro-azulado-Texto);
+}
+
+.category-select option:hover{
+    background: var(--verde-Acento);
+    color: var(--negro-azulado-Texto);
+    transition-duration: 3rem;
+}
+
+
+.category-select label {
+    display: none;
+    position: left;
+    background-color: var(--verde-Acento);
+    box-shadow: var(--profile-menu-Sombra);
+    border-radius: 10px;
+    top: 50px;
+    right: 0;
+    width: 216px;
+    list-style: none;
+}
+
+
+
+
+/* barra de herramientas */
+.toolbar {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--verde-Acento);
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+  gap: 0.5rem;
+}
+
+.toolbar button {
+  background: none;
+  border: none;
+  color: var(--verde-primario);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.toolbar button:hover {
+  color: var(--verde-Acento);
+}
+
+.separator {
+  height: 20px;
+  width: 1px;
+  background-color: var(--verde-Acento);
+}
+
+/*/////////////////titulos y contenido de publicacion////////////*/
+.post-title {
+  width: 95%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--borde-create-post);
+  border-radius: 5px;
+  font-size: 1rem;
+  font-style: italic;
+  background-color: var(--blanco-Fondo);
+  color: var(--negro-azulado-Texto);
+}
+
+
+.post-content {
+  width: 95%;
+  height: 130px;
+  padding: 0.8rem;
+  border: 1px solid var(--borde-create-post);
+  border-radius: 5px;
+  resize: vertical;
+  font-size: 0.95rem;
+  font-style: italic;
+  background-color: var(--blanco-Fondo);
+  color: var(--negro-azulado-Texto);
+}
+
+/*//////////botones de guardar y publicar//////////*/
+.post-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.post-actions button {
+  border: none;
+  background: var(--blanco-Fondo);
+  font-size: 1.3rem;
+  color: var(--negro-azulado-Texto);
+  cursor: pointer;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.post-actions button:hover {
+  transform: translateY(-2px);
+  color: var(--verde-Acento);
+}
+
+
+/*////////////tooltip-texto debajo de icono///*/
+.tooltip {
+  position: relative;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--gris-azulado-oscuro-Tooltip);
+  color: var(--blanco-Tooltip);
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  z-index: 10;
+  font-weight: 500;
+}
+
+button:hover .tooltip,
+button:focus .tooltip {
+  opacity: 1;
+}
+
+

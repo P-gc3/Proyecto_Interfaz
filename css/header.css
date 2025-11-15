@@ -1,0 +1,323 @@
+.header {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between; 
+    background-color: var(--verde-Primario);
+    padding: 0 16px;
+    border-bottom: 1px solid var(--verde-Acento);
+    height: 56px;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.MiLotero-logo {
+    width: 150px;
+}
+
+.header-actions, .header-left {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 8px;
+}
+
+.header-action {
+    position: relative;
+}
+
+.header-action > button, .menu-button {
+    border: none;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+}
+
+.header-action > button:hover, .menu-button:hover {
+    background-color: var(--verde-Hover);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.header-action > button:active, .menu-button:active{
+    background-color: transparent;
+}
+
+.header-action-tooltip, .header-left-tooltip {
+    display: none;
+    position: absolute;
+    padding: 5px 15px;
+    background-color: var(--gris-azulado-oscuro-Tooltip);
+    color: var(--blanco-Tooltip);
+    border-radius: 3px;
+    font-size: 1rem; /* 16px */
+    white-space: nowrap;
+    left: 50%;
+    bottom: -37px;
+    transform: translateX(-50%);
+}
+
+.header-action > button:hover .header-action-tooltip, .menu-button:hover .header-left-tooltip{
+    display: block;
+}
+
+.profile-menu-button .header-action-tooltip{
+    right: 0;
+    left: auto;
+    transform: none;
+}
+
+.profile-menu{
+    display: none;
+    position: absolute;
+    background-color: var(--blanco-mas-claro-Fondo);
+    box-shadow: var(--profile-menu-Sombra);
+    border-radius: 10px;
+    top: 50px;
+    right: 0;
+    width: 216px;
+    list-style: none;
+}
+
+.profile-menu-visibility{
+    display: none;
+}
+
+.profile-menu-visibility:checked ~ .profile-menu {
+    display: block;
+}
+
+.header-action-profile-label:hover{
+    cursor: pointer;
+}
+
+.profile-menu-visibility:checked ~ .profile-menu-button:hover .header-action-tooltip{
+    display: none;
+}
+
+.profile-menu {
+    list-style: none;
+    padding: 8px 0 0;
+    margin: 0;
+}
+
+.profile-menu-item {
+    display: flex;
+    gap: 10px;
+    padding: 8px 16px;
+    align-items: center;
+}
+
+.profile-menu-item:not(.profile-menu-item-logout):hover {
+    background-color: var(--blanco-mas-claro-Hover);
+    cursor: pointer;
+}
+
+.profile-menu-item:not(.profile-menu-item-logout):active {
+    background-color: var(--overlay-Fondo);
+}
+
+.profile-menu-item:hover .profile-menu-link {
+    background: none; 
+}
+
+.profile-menu-link {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: inherit; 
+}
+
+.profile-menu-item-right {
+    width: 32px;
+    height: 32px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-menu-item-left {
+    flex-grow: 1;
+}
+
+.profile-menu-item-icon {
+    width: 20px;          
+    height: 20px;
+}
+
+.profile-menu-item-icon-next {
+    border-radius: 50%;
+}
+
+.profile-menu-item-title {
+    color: var(--negro-azulado-Texto);
+    font-size: 0.875rem; /* 14px */
+}
+
+.profile-menu-logout-button{
+    width: 100%;
+    text-align: center;
+    padding: 10px 16px;
+    background: transparent;
+    font-size: 0.875rem; /* 14px */
+    cursor: pointer;
+    border: 3px solid var(--negro-azulado-Texto);
+    border-radius: 20px;
+    color: var(--negro-azulado-Texto);
+}
+
+.profile-menu-logout-button:hover{
+    background: var(--blanco-mas-claro-Hover);
+}
+
+.profile-menu-logout-button:active{
+    background-color: var(--overlay-Fondo);
+}
+
+.menu-button {
+    position: relative;
+    background: transparent;
+    border: none;
+    padding: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-button .header-left-tooltip {
+    left: 0;
+    right: auto;
+    transform: none;
+}
+
+.menu-button span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--blanco-TextoYSolido);
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* RESPONSIVOOOOOOOOO */
+
+/* MÓVIL */
+@media (max-width: 768px) {
+    .header {
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+
+    .header-left {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .MiLotero-logo {
+        width: 120px;
+    }
+
+    .menu-button {
+        width: 40px;
+        height: 40px;
+        padding: 6px;
+    }
+
+    .menu-button img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .search-wrapper {
+        display: none;
+    }
+
+    .search-wrapper.open {
+        display: flex !important;
+    }
+
+    .header-actions {
+        display: flex !important;  
+        align-items: center;
+        gap: 6px;
+    }
+
+    .header-action > button {
+        width: 36px;
+        height: 36px;
+        padding: 4px;
+    }
+
+    .header-action-tooltip,
+    .header-left-tooltip {
+        font-size: 0.8125rem; /* 13px */
+        bottom: -30px;
+    }
+
+    .profile-menu {
+        top: 48px;
+        right: 4px;
+        width: 180px;
+    }
+
+    .profile-menu-item-title {
+        font-size: 0.8125rem; /* 13px */
+    }
+
+    .profile-menu-logout-button {
+        font-size: 0.8125rem; /* 13px */
+        padding: 8px 12px;
+    }
+}   
+
+/*   TABLET */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .MiLotero-logo {
+        width: 130px;
+    }
+
+    .search {
+        width: 360px;
+    }
+
+    .header-actions {
+        gap: 8px;
+    }
+
+    .header-action > button {
+        width: 38px;
+        height: 38px;
+    }
+
+    .profile-menu {
+        width: 200px;
+    }
+}   
+
+/*   DESKTOP */
+@media (min-width: 1025px) {
+    .MiLotero-logo {
+        width: 150px;
+    }
+
+    .search {
+        width: 528px;
+    }
+
+    .menu-button img {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .search-icon{
+    margin-left: -200px;  
+    
+    }
+}
