@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MundoCup</title>
+
+    <link rel="stylesheet" href="css/variables.css">
+
+    <link rel="stylesheet" href="css/filter.css">
+    <link rel="stylesheet" href="css/page.css">
+    <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/post.css">
+    <link rel="stylesheet" href="css/header.css"> 
+    <link rel="stylesheet" href="css/accessibility.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <div id="sidebar-placeholder"></div>
+    <div id="breadcrumbs-placeholder"></div>
+    <div id="accessibility-placeholder"></div>
+
+    
+        <div class="internal-header">
+                <h1 class="internal-header-title">Mi perfil</h1>
+        </div>
+    
+        <div class="profile">
+            <!-- aqui la info -->
+            <section class="profile-info">
+                <div class="profile-avatar-section">
+                    <img src="Images/Community/Meryl.jpg" alt="Avatar de usuario" class="profile-avatar">
+                    <button class="profile-avatar-edit">Editar foto</button>
+                </div>
+            
+                <form class="profile-form">
+                    <div class="form-row">
+                        <label>Nombre</label>
+                        <input type="text" value="Meryl">
+                    </div>
+
+                    <div class="form-row">
+                        <label>Apellidos</label>
+                        <input type="text" value="Streep">
+                    </div>
+                
+                    <div class="form-row">
+                        <label>Fecha de nacimiento</label>
+                        <input type="date" value="1949-06-22">
+                    </div>
+                
+                    <div class="form-row">
+                        <label>Género</label>
+                        <select>
+                            <option>Femenino</option>
+                            <option>Masculino</option>
+                            <option>Otro</option>
+                        </select>
+                    </div>
+                
+                    <div class="form-row">
+                        <label>País de nacimiento</label>
+                        <input type="text" value="Estados Unidos">
+                    </div>
+                
+                    <div class="form-row">
+                        <label>Nacionalidad</label>
+                        <input type="text" value="Estadounidense">
+                    </div>
+                
+                    <div class="form-row">
+                        <label>Correo electrónico</label>
+                        <input type="email" value="meryl@example.com">
+                    </div>
+                
+                    <div class="form-row">
+                        <label>Contraseña</label>
+                        <input type="password" value="********">
+                    </div>
+                
+                    <button type="submit" class="profile-save-btn">Guardar cambios</button>
+                </form>
+            </section>
+
+            <!-- publicaciones -->
+            <section class="profile-posts">
+                <h2>Mis publicaciones</h2>
+
+                <article class="post">
+                    <header class="post-header">
+                        <div class="post-author">
+                            <img class="post-avatar" src="Images/Community/Meryl.jpg" alt="Foto de Meryl Streep">
+                            <div class="post-author-info">
+                                <span class="post-author-username">@MerylStreep</span>
+                            </div>
+                        </div>
+                        <div class="post-meta-left">
+                            <span class="post-mundial">🏆 Qatar 2022</span>
+                            <span class="post-category">• Entrevistas</span>
+                            <span class="post-country">• 🇧🇷 Brasil</span>
+                        </div>
+                        <div class="post-meta-right">
+                            <time class="post-time" datetime="2025-10-15T13:30">15 Oct 2025, 13:30</time>
+                        </div>
+                    </header>
+                
+                    <div class="post-content">
+                        <p>Woow, que tremendo el gol.</p>
+                        <img src="Images/Trending/Milla.jpg" alt="Imagen del post">
+                    </div>
+                
+                    <footer class="post-footer">
+                        <div class="post-actions">
+                            <button class="post-action">
+                                <img src="Images/Icons/like.svg" alt="Like" class="post-action-icon">
+                                <span class="post-action-count">123</span>
+                            </button>
+                            <button class="post-action">
+                                <img src="Images/Icons/comment.svg" alt="Comentarios" class="post-action-icon">
+                                <span class="post-action-count">45</span>
+                            </button>
+                            <div class="post-action views">
+                                <img src="Images/Icons/views.svg" alt="Vistas" class="post-action-icon">
+                                <span class="post-action-count">789</span>
+                            </div>
+                        </div>
+                    </footer>
+                </article>
+            </section>
+        </div>
+    </div>
+    <script src="js/components.js"></script>
+    <script src="js/apps.js"></script>
+    <script>
+      function customizeBreadcrumbs() {
+        const bc = document.querySelector('.breadcrumbs ol');
+        if (!bc) return;
+    
+        bc.innerHTML = `
+          <li><a href="index.html">Inicio</a></li>
+          <li class="current" aria-current="page">Foro</li>
+        `;
+      }
+    </script>
+</body>
+</html>

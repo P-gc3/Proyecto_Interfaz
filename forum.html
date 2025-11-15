@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foro | MundoCup</title>
+
+    <link rel="stylesheet" href="css/variables.css">
+
+    <link rel="stylesheet" href="css/filter.css">
+    <link rel="stylesheet" href="css/page.css">
+    <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/forum.css">
+    <link rel="stylesheet" href="css/post.css">
+    <link rel="stylesheet" href="css/header.css"> 
+    <link rel="stylesheet" href="css/accessibility.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div id="header-placeholder"></div>
+    <div id="sidebar-placeholder"></div>
+    <div id="breadcrumbs-placeholder"></div>
+    <div id="accessibility-placeholder"></div>
+    
+    <div class="content">
+    
+        <div class="internal-header">
+            <h1 class="internal-header-title">Foro</h1>
+        </div>
+    
+        <!-- FILTROS MÓVIL -->
+        <div class="filter-toggle">
+            <input type="checkbox" id="filter-toggle-checkbox">
+            <label for="filter-toggle-checkbox" class="filter-toggle-label filter-style-b">
+                Ver filtros
+                <img src="Images/Icons/next.svg" class="filter-toggle-icon">
+            </label>
+        
+            <div class="filter-panel">
+                <aside class="forum-sidebar">
+                    <h2 class="filter-title">Filtros</h2>
+                
+                    <ul class="filter-list">
+                    
+                        <!-- MUNDIAL -->
+                        <li>
+                            <input type="checkbox" id="mobile-filter-mundial" class="filter-collapse-checkbox">
+                            <label class="filter-collapse-label" for="mobile-filter-mundial">
+                                Mundial
+                                <img src="Images/Icons/next.svg" alt="Desplegar">
+                            </label>
+                        
+                            <ul class="filter-options">
+                                <li><label class="filter-option"><input type="radio" name="mundial"> Qatar 2022</label></li>
+                                <li><label class="filter-option"><input type="radio" name="mundial"> Rusia 2018</label></li>
+                            </ul>
+                        </li>
+                    
+                        <!-- CATEGORÍA -->
+                        <li>
+                            <input type="checkbox" id="mobile-filter-categoria" class="filter-collapse-checkbox">
+                            <label class="filter-collapse-label" for="mobile-filter-categoria">
+                                Categoría
+                                <img src="Images/Icons/next.svg">
+                            </label>
+                        
+                            <ul class="filter-options">
+                                <li><label class="filter-option"><input type="checkbox"> Entrevistas</label></li>
+                                <li><label class="filter-option"><input type="checkbox"> Leyendas</label></li>
+                                <li><label class="filter-option"><input type="checkbox"> Estadísticas</label></li>
+                            </ul>
+                        </li>
+                    
+                        <!-- PAÍS -->
+                        <li>
+                            <input type="checkbox" id="mobile-filter-pais" class="filter-collapse-checkbox">
+                            <label class="filter-collapse-label" for="mobile-filter-pais">
+                                País sede
+                                <img src="Images/Icons/next.svg">
+                            </label>
+                        
+                            <ul class="filter-options">
+                                <li><label class="filter-option"><input type="checkbox"> Qatar 🇶🇦</label></li>
+                                <li><label class="filter-option"><input type="checkbox"> Rusia 🇷🇺</label></li>
+                                <li><label class="filter-option"><input type="checkbox"> Brasil 🇧🇷</label></li>
+                                <li><label class="filter-option"><input type="checkbox"> Sudáfrica 🇿🇦</label></li>
+                            </ul>
+                        </li>
+                    
+                        <!-- USUARIO -->
+                        <li>
+                            <input type="checkbox" id="mobile-filter-usuario" class="filter-collapse-checkbox" /><label class="filter-collapse-label" for="mobile-filter-usuario">
+                                Usuario
+                                <img src="Images/Icons/next.svg">
+                            </label>
+                            
+                            <ul class="filter-options">
+                                <li style="padding: 8px 0;">
+                                    <input type="text" class="filter-user-input" placeholder="@usuario">
+                                </li>
+                            </ul>
+                        </li>
+
+
+                    
+                    </ul>
+                
+                    <button class="filter-apply-button">Filtrar</button>
+                </aside>
+            </div>
+        </div>
+
+    
+        <!-- contenido y filtro desk-->
+        <div class="forum">
+            <div class="forum-grid">
+            
+                <main class="forum-main">
+                
+                    <article class="post">
+                        <header class="post-header">
+                            <div class="post-author">
+                                <img class="post-avatar" src="Images/Community/Meryl.jpg">
+                                <span>@MerylStreep</span>
+                            </div>
+                            <div class="post-meta-left"> Qatar 2022 • Leyendas • Brasil</div>
+                            <time class="post-time">15 Oct 2025</time>
+                        </header>
+                    
+                        <div class="post-content">
+                            <p>Woow, que tremendo el gol.</p>
+                            <img src="Images/Trending/Milla.jpg">
+                        </div>
+                        <footer class="post-footer">
+                            <div class="post-actions">
+                                <button class="post-action">
+                                    <img src="Images/Icons/like.svg" alt="Like" class="post-action-icon">
+                                    <span class="post-action-count">123</span>
+                                </button>
+                            
+                                <button class="post-action">
+                                    <img src="Images/Icons/comment.svg" alt="Comentarios" class="post-action-icon">
+                                    <span class="post-action-count">45</span>
+                                </button>
+                            </div>
+                            <div class="post-comment-input">
+                                <input type="text" placeholder="Escribe un comentario...">
+                            </div>
+                        </footer>
+                    </article>
+
+                    <article class="post">
+                        <header class="post-header">
+                            <div class="post-author">
+                                <img class="post-avatar" src="Images/Community/Mads.jpg">
+                                <span>@MadsMikkelsen</span>
+                            </div>
+                            <div class="post-meta-left"> Brasil 2014 • Entrevistas • Alemania</div>
+                            <time class="post-time">15 Oct 2025</time>
+                        </header>
+                    
+                        <div class="post-content">
+                            <p>Entrevisté a Thomas MULLER!!!</p>
+                            <div class="post-media youtube-video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/9-ENiWWAVSs?si=Ump349dQ8QCB_ZcM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <footer class="post-footer">
+                            <div class="post-actions">
+                                <button class="post-action">
+                                    <img src="Images/Icons/like.svg" alt="Like" class="post-action-icon">
+                                    <span class="post-action-count">1983</span>
+                                </button>
+                            
+                                <button class="post-action">
+                                    <img src="Images/Icons/comment.svg" alt="Comentarios" class="post-action-icon">
+                                    <span class="post-action-count">83</span>
+                                </button>
+                            </div>
+                            <div class="post-comment-input">
+                                <input type="text" placeholder="Escribe un comentario...">
+                            </div>
+                        </footer>
+                    </article>
+                
+                </main>
+            
+                <!-- filtro desk -->
+                <aside class="forum-sidebar sidebar-desktop">
+                
+                    <h2 class="filter-title">Filtros</h2>
+                
+                    <ul class="filter-list">
+                    
+                        <!-- MUNDIAL -->
+                        <li>
+                            <input type="checkbox" id="desk-filter-mundial" class="filter-collapse-checkbox">
+                            <label class="filter-collapse-label" for="desk-filter-mundial">
+                                Mundial
+                                <img src="Images/Icons/next.svg" alt="Desplegar">
+                            </label>
+                        
+                            <ul class="filter-options">
+                                <li><label class="filter-option"><input type="radio" name="desk-mundial"> Qatar 2022</label></li>
+                                <li><label class="filter-option"><input type="radio" name="desk-mundial"> Rusia 2018</label></li>
+                            </ul>
+                        </li>
+                    
+                        <!-- CATEGORÍA -->
+                        <li>
+                            <input type="checkbox" id="desk-filter-categoria" class="filter-collapse-checkbox">
+                            <label class="filter-collapse-label" for="desk-filter-categoria">
+                                Categoría
+                                <img src="Images/Icons/next.svg">
+                            </label>
+                        
+                            <ul class="filter-options">
+                                <li><label class="filter-option"><input type="checkbox"> Entrevistas</label></li>
+                                <li><label class="filter-option"><input type="checkbox"> Leyendas</label></li>
+                                <li><label class="filter-option"><input type="checkbox"> Estadísticas</label></li>
+                            </ul>
+                        </li>
+                    
+                        <!-- PAÍS -->
+                        <li>
+                            <input type="checkbox" id="desk-filter-pais" class="filter-collapse-checkbox">
+                            <label class="filter-collapse-label" for="desk-filter-pais">
+                                País sede
+                                <img src="Images/Icons/next.svg">
+                            </label>
+                        
+                            <ul class="filter-options">
+                                <li><label class="filter-option"><input type="checkbox"> Qatar 🇶🇦</label></li>
+                                <li><label class="filter-option"><input type="checkbox"> Rusia 🇷🇺</label></li>
+                                <li><label class="filter-option"><input type="checkbox"> Brasil 🇧🇷</label></li>
+                                <li><label class="filter-option"><input type="checkbox"> Sudáfrica 🇿🇦</label></li>
+                            </ul>
+                        </li>
+                    
+                        <!-- USUARIO -->
+                        <li>
+                            <input type="checkbox" class="filter-collapse-checkbox" id="desk-filter-usuario">
+                            <label class="filter-collapse-label" for="desk-filter-usuario">
+                                Usuario
+                                <img src="Images/Icons/next.svg" alt="Desplegar">
+                            </label>
+                        
+                            <ul class="filter-options">
+                                <li style="padding: 8px 0;">
+                                    <input type="text" class="filter-user-input" placeholder="@usuario">
+                                </li>
+                            </ul>
+                        </li>
+                    
+                    </ul>
+                
+                    <button class="filter-apply-button">Filtrar</button>
+                
+                </aside>
+
+            
+            </div>
+        </div>
+    
+    </div>
+    <script src="js/components.js"></script>
+    <script>
+      function customizeBreadcrumbs() {
+        const bc = document.querySelector('.breadcrumbs ol');
+        if (!bc) return;
+    
+        bc.innerHTML = `
+          <li><a href="index.html">Inicio</a></li>
+          <li class="current" aria-current="page">Foro</li>
+        `;
+      }
+    </script>
+</body>
+</html>
