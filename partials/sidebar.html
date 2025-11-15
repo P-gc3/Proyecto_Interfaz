@@ -1,0 +1,99 @@
+<ul class="sidebar collapsed">
+    <li>
+        <ul class="sidebar-section">
+            <li>
+                <a href="index.html" class="sidebar-link">
+                    <img src="Images/Icons/home.svg" class="icon" alt="Inicio">
+                    <div class="sidebar-section-item-details">
+                        Inicio
+                    </div>
+                </a> 
+            </li>
+            <li>
+                <a href="forum.html" class="sidebar-link">
+                    <img src="Images/Icons/forum.svg" class="icon" alt="Mensaje">
+                    <div class="sidebar-section-item-details">
+                        Foro
+                    </div>
+                </a>
+            </li>
+        </ul>
+    <li>
+        <input type="checkbox" class="sidebar-collapse-checkbox" id="sidebar-collapse-checkbox-mundiales"/>
+        <label class="sidebar-collapse-label" for="sidebar-collapse-checkbox-mundiales">
+            Mundiales
+            <img src="Images/Icons/nextW.svg" class="" alt="Desplegar"></img>
+        </label>
+        <ul class="sidebar-section">
+            <li>
+                <a href="worldcup.html" class="sidebar-link">
+                    <img src="Images/Icons/globe.svg" class="icon" alt="Mundo">
+                    <div class="sidebar-section-item-details">
+                        Qatar 2022
+                    </div>
+                </a> 
+            </li>
+            <li>
+                <a href="" class="sidebar-link">
+                    <img src="Images/Icons/globe.svg" class="icon" alt="Mundo">
+                    <div class="sidebar-section-item-details">
+                        El resto...
+                    </div>
+                </a> 
+            </li>
+        </ul>
+    </li>
+    
+    <li>
+        <ul class="sidebar-section">
+            <li>
+                <div class="sidebar-link theme-toggle">
+                    <img src="Images/Icons/sun.svg" class="icon theme-icon" alt="Sol">
+                    <div class="sidebar-section-item-details">
+                        <span id="theme-label">Modo claro</span>
+                        <label class="switch">
+                            <input type="checkbox" id="theme-switch">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <a href="" class="copyright-link">
+            &copy; 2025 MundoCup
+        </a>
+    </li>
+</ul>
+<script>
+    /* Modo oscuro */
+    const themeSwitch = document.getElementById('theme-switch');
+    const themeIcon = document.querySelector('.theme-icon');
+    const themeLabel = document.getElementById('theme-label');
+    themeSwitch.addEventListener('change', () => {
+        if (themeSwitch.checked) {
+            document.body.classList.add('dark-mode');
+            themeIcon.src = 'Images/Icons/moon.svg';
+            themeIcon.alt = 'Luna';
+            themeLabel.textContent = 'Modo oscuro';
+        } else {
+            document.body.classList.remove('dark-mode');
+            themeIcon.src = 'Images/Icons/sun.svg';
+            themeIcon.alt = 'Sol';
+            themeLabel.textContent = 'Modo claro';
+        }   
+    });
+    /* Sidebar  y overlay */
+    const menuButton = document.querySelector('.menu-button');
+    const sidebar = document.querySelector('.sidebar');
+    const overlay = document.createElement('div');
+    overlay.classList.add('sidebar-overlay');
+    document.body.appendChild(overlay);
+    menuButton.addEventListener('click', () => {
+      const isCollapsed = sidebar.classList.toggle('collapsed');
+      overlay.classList.toggle('active', !isCollapsed); 
+    });
+    overlay.addEventListener('click', () => {
+      sidebar.classList.add('collapsed');
+      overlay.classList.remove('active');
+    });
+</script>
