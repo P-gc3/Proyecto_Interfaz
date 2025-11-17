@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Put your description here.">
+    
+    <title>Crear cuenta - MundoCup</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/page.css">
+    <link rel="stylesheet" href="css/create-account.css">
+    <link rel="stylesheet" href="css/switch.css">
+    <link rel="stylesheet" href="css/accessibility.css"> 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="accessibility-placeholder"></div>
+    
+    <div class="content">
+    
+        <div class="create-exit">
+            <a href="index.html">&lt; Regresar</a>
+        </div>
+
+        <main class="auth-container">
+            <div class="auth-card">
+                <h1>Crear cuenta</h1>
+                <div class="profile-image-container">
+                    <label for="foto" class="profile-image-label">
+                        <img id="profile-preview" src="Images/Community/Logan.jpg" alt="Foto de perfil">
+                        <div class="profile-image-edit-icon">
+                            <img src="Images/Icons/addimage.svg" alt="Editar">
+                        </div>
+                    </label>
+                    <input type="file" id="foto" accept="image/*" hidden>
+                </div>
+
+                <form class="auth-form">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" placeholder="Ej. Lionel">
+                            <p class="error-msg" id="error-nombre"></p>
+                        </div>
+                        <div class="form-group">
+                            <label for="apellido">Apellido</label>
+                            <input type="text" id="apellido" placeholder="Ej. Messi">
+                            <p class="error-msg" id="error-apellido"></p>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fecha-nacimiento">Fecha de nacimiento</label>
+                            <input type="date" id="fecha-nacimiento">
+                            <p class="error-msg" id="error-fecha"></p>
+                        </div>
+                        <div class="form-group">
+                            <label for="genero">Género</label>
+                            <select id="genero">
+                                <option value="">Seleccionar</option>
+                                <option value="masculino">Masculino</option>
+                                <option value="femenino">Femenino</option>
+                                <option value="otro">Otro / Prefiero no decir</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="pais-nacimiento">País de nacimiento</label>
+                            <input type="text" id="pais-nacimiento" placeholder="Ej. Argentina">
+                            <p class="error-msg" id="error-pais"></p>
+                        </div>
+                        <div class="form-group">
+                            <label for="nacionalidad">Nacionalidad</label>
+                            <input type="text" id="nacionalidad" placeholder="Ej. Argentina">
+                            <p class="error-msg" id="error-nacionalidad"></p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="correo">Correo electrónico</label>
+                        <input type="email" id="correo" placeholder="correo@ejemplo.com">
+                        <p class="error-msg" id="error-correo"></p>
+                    </div>
+
+                    <div class="form-group password-wrapper">
+                        <label for="contrasena">Contraseña</label>
+                        <div class="password-field">
+                            <input type="password" id="contrasena" placeholder="••••••••">
+                            <img src="Images/Icons/eye-close-1.svg" class="toggle-password" data-target="contrasena" alt ="Ocultar">
+                        </div>
+                        <p class="error-msg" id="error-contrasena"></p>
+                    </div>
+
+                    <div class="form-group password-wrapper">
+                        <label for="confirmar-contrasena">Confirmar contraseña</label>
+                        <div class="password-field">
+                            <input type="password" id="confirmar-contrasena" placeholder="••••••••">
+                            <img src="Images/Icons/eye-close-1.svg" class="toggle-password" data-target="confirmar-contrasena" alt ="Ocultar confirmacion">
+                        </div>
+                        <p class="error-msg" id="error-confirmar"></p>
+                    </div>
+
+
+                    <a href="index.html" class="auth-button">Crear cuenta</a>               
+                    <p class="auth-footer">
+                      ¿Ya tienes una cuenta? <a href="log-in.html">Inicia sesión</a>
+                    </p>
+                </form>
+            </div>
+        </main>
+
+
+        <div class="theme-toggle-auth">
+            <img src="Images/Icons/sun.svg" class="theme-icon" alt="Sol">
+            <label class="switch">
+                <input type="checkbox" id="theme-switch">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </div>
+    <script src="js/components.js"></script>
+    <script src="js/theme.js"></script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const form = document.querySelector(".auth-form");
+    const createButton = document.querySelector(".auth-button");
+    const photoInput = document.getElementById("foto");
+    const preview = document.getElementById("profile-preview");
+
+    // vista previa 
+    if (photoInput) {
+        photoInput.addEventListener("change", (e) => {
+        const file = e.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = (ev) => {
+            preview.src = ev.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+        });
+    }
+
+    if (createButton) {
+        createButton.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        const nombre = document.getElementById("nombre").value.trim();
+        const apellido = document.getElementById("apellido").value.trim();
+        const correo = document.getElementById("correo").value.trim();
+        const contrasena = document.getElementById("contrasena").value;
+        const confirmar = document.getElementById("confirmar-contrasena").value;
+
+        if (!nombre || !apellido || !correo || !contrasena) {
+            alert("Por favor completa todos los campos obligatorios.");
+            return;
+        }
+        if (contrasena !== confirmar) {
+            alert("Las contraseñas no coinciden.");
+            return;
+        }
+
+        const userData = {
+            nombre,
+            apellido,
+            correo,
+            foto: preview.src || "Images/Community/Logan.jpg",
+        };
+
+        localStorage.setItem("isLoggedIn", "true");
+        localStorage.setItem("userRole", "user");
+        localStorage.setItem("userData", JSON.stringify(userData));
+
+        window.location.href = "profile.html";
+        });
+    }
+    });
+    </script>
+
+
+    <script>
+        const themeSwitch = document.getElementById('theme-switch');
+        const themeIcon = document.querySelector('.theme-toggle-auth .theme-icon');
+
+        const isDark = document.body.classList.contains('dark-mode');
+        themeSwitch.checked = isDark;
+        themeIcon.src = isDark ? 'Images/Icons/moon.svg' : 'Images/Icons/sun.svg';
+        themeIcon.alt = isDark ? 'Luna' : 'Sol';
+
+        themeSwitch.addEventListener('change', () => {
+            const nowDark = themeSwitch.checked;
+            toggleTheme(nowDark); 
+            themeIcon.src = nowDark ? 'Images/Icons/moon.svg' : 'Images/Icons/sun.svg';
+            themeIcon.alt = nowDark ? 'Luna' : 'Sol';
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const inputs = {
+                nombre: document.getElementById("nombre"),
+                apellido: document.getElementById("apellido"),
+                fecha: document.getElementById("fecha-nacimiento"),
+                genero: document.getElementById("genero"),
+                pais: document.getElementById("pais-nacimiento"),
+                nacionalidad: document.getElementById("nacionalidad"),
+                correo: document.getElementById("correo"),
+                contrasena: document.getElementById("contrasena"),
+                confirmar: document.getElementById("confirmar-contrasena"),
+            };
+        
+            function setFeedback(input, msg = "") {
+                const errorP = input.parentElement.querySelector(".error-msg");
+                if (msg) {
+                    input.classList.add("input-error");
+                    input.classList.remove("input-success");
+                    errorP.style.display = "block";
+                    errorP.textContent = msg;
+                } else {
+                    input.classList.remove("input-error");
+                    input.classList.add("input-success");
+                    errorP.style.display = "none";
+                }
+            }
+        
+            function validarNombre() {
+                const val = inputs.nombre.value.trim();
+                if (val.length < 2) return setFeedback(inputs.nombre, "Ingresa un nombre válido.");
+                setFeedback(inputs.nombre);
+            }
+        
+            function validarApellido() {
+                const val = inputs.apellido.value.trim();
+                if (val.length < 2) return setFeedback(inputs.apellido, "Ingresa un apellido válido.");
+                setFeedback(inputs.apellido);
+            }
+        
+            function validarFecha() {
+                const value = inputs.fecha.value;
+                if (!value) return setFeedback(inputs.fecha, "Selecciona tu fecha de nacimiento.");
+            
+                const nacimiento = new Date(value);
+                const hoy = new Date();
+                const edad = hoy.getFullYear() - nacimiento.getFullYear();
+            
+                const ajustada = 
+                    hoy.getMonth() < nacimiento.getMonth() ||
+                    (hoy.getMonth() === nacimiento.getMonth() && hoy.getDate() < nacimiento.getDate())
+                    ? edad - 1 : edad;
+            
+                if (ajustada < 12) {
+                    return setFeedback(inputs.fecha, "Debes tener al menos 12 años.");
+                }
+            
+                setFeedback(inputs.fecha);
+            }
+        
+            function validarGenero() {
+                if (inputs.genero.value === "") {
+                    return setFeedback(inputs.genero, "Selecciona un género.");
+                }
+                setFeedback(inputs.genero);
+            }
+        
+            function validarPais() {
+                if (inputs.pais.value.trim().length < 2) {
+                    return setFeedback(inputs.pais, "Ingresa un país válido.");
+                }
+                setFeedback(inputs.pais);
+            }
+        
+            function validarNacionalidad() {
+                if (inputs.nacionalidad.value.trim().length < 2) {
+                    return setFeedback(inputs.nacionalidad, "Ingresa una nacionalidad válida.");
+                }
+                setFeedback(inputs.nacionalidad);
+            }
+        
+            function validarCorreo() {
+                const val = inputs.correo.value.trim();
+                const exp = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!exp.test(val)) return setFeedback(inputs.correo, "Correo no válido.");
+                setFeedback(inputs.correo);
+            }
+        
+            function validarContrasena() {
+                const val = inputs.contrasena.value.trim();
+                if (val.length < 6) {
+                    return setFeedback(inputs.contrasena, "La contraseña debe tener al menos 6 caracteres.");
+                }
+                setFeedback(inputs.contrasena);
+                validarConfirmar();
+            }
+        
+            function validarConfirmar() {
+                if (inputs.confirmar.value !== inputs.contrasena.value) {
+                    return setFeedback(inputs.confirmar, "Las contraseñas no coinciden.");
+                }
+                setFeedback(inputs.confirmar);
+            }
+        
+            inputs.nombre.addEventListener("input", validarNombre);
+            inputs.apellido.addEventListener("input", validarApellido);
+            inputs.fecha.addEventListener("change", validarFecha);
+            inputs.genero.addEventListener("change", validarGenero);
+            inputs.pais.addEventListener("input", validarPais);
+            inputs.nacionalidad.addEventListener("input", validarNacionalidad);
+            inputs.correo.addEventListener("input", validarCorreo);
+            inputs.contrasena.addEventListener("input", validarContrasena);
+            inputs.confirmar.addEventListener("input", validarConfirmar);
+        
+            document.querySelector(".auth-button").addEventListener("click", (e) => {
+                e.preventDefault();
+            
+                validarNombre();
+                validarApellido();
+                validarFecha();
+                validarGenero();
+                validarPais();
+                validarNacionalidad();
+                validarCorreo();
+                validarContrasena();
+                validarConfirmar();
+            
+                const errors = document.querySelectorAll(".input-error");
+                if (errors.length > 0) {
+                    alert("Revisa los campos marcados.");
+                    return;
+                }
+                alert("Cuenta creada exitosamente (demo).");
+            });
+        });
+        </script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+            
+                const toggleButtons = document.querySelectorAll(".toggle-password");
+            
+                toggleButtons.forEach(btn => {
+                    btn.addEventListener("click", () => {
+                        const inputId = btn.dataset.target;
+                        const input = document.getElementById(inputId);
+                    
+                        if (input.type === "password") {
+                            input.type = "text";
+                            btn.src = "Images/Icons/eye-18.svg"; // ojo abierto
+                        } else {
+                            input.type = "password";
+                            btn.src = "Images/Icons/eye-close-1.svg"; // ojo cerrado
+                        }
+                    });
+                });
+            
+            });
+            </script>
+
+
+</body>
+</html>

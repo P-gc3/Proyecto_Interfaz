@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Crear publicación | MundoCup</title>
+
+        <link rel="stylesheet" href="css/create-post.css">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/filter.css">
+        <link rel="stylesheet" href="css/page.css">
+        <link rel="stylesheet" href="css/search.css">
+        <link rel="stylesheet" href="css/sidebar.css">
+        <link rel="stylesheet" href="css/forum.css">
+        <link rel="stylesheet" href="css/post.css">
+        <link rel="stylesheet" href="css/header.css"> 
+        <link rel="stylesheet" href="css/accessibility.css"> 
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div id="header-placeholder"></div>
+        <div id="sidebar-placeholder"></div>
+        <div id="breadcrumbs-placeholder"></div>
+        <div id="accessibility-placeholder"></div>
+
+        <div class="content">
+            <div class="internal-header">
+                <h1 class="internal-header-title">Crear publicación</h1>
+            </div>
+            <div class ="create-post">
+                <div class="category-select">
+                    <label for="categoria"></label>
+                    <select id="categoria" required>
+                    <option value="" disabled selected>Selecciona una categoría</option>
+                    <option value="mundiales">Mundiales</option>
+                    <option value="leyendas">Leyendas del fútbol</option>
+                    <option value="entrevistas">Entrevistas</option>
+                    <option value="estadisticas">Estadísticas</option>
+                    <option value="aficionados">Archivo de aficionados</option>
+                    </select>
+                </div>
+
+                <div class="toolbar">
+                    <button>
+                        <label for="nombre">Texto</label>
+                        <div class="tooltip">
+                            Insertar texto
+                        </div>
+                    </button>
+                    <div class="separator"></div>
+                    <button>
+                        <label for="imagen">Imagen</label>
+                        <div class="tooltip">Insertar imagen</div>
+                    </button>
+                    <div class="separator"></div>
+                    <button>
+                        <label for="video">Video</label>
+                        <div class="tooltip">Insertar video</div>
+                    </button>
+                    <div class="separator"></div>
+                    <button>
+                        <label for="link">Link</label>
+                        <div class="tooltip">Insertar enlace</div>
+                    </button>
+                </div>
+
+                <input type="text" placeholder="Título" class="post-title">
+                <textarea placeholder="Escribe tu publicación aquí..." class="post-content"></textarea>
+
+                <div class="post-actions">
+                    <button class="save">
+                        <label for="save">Guardar</label>
+                        <div class="tooltip">Guardar</div>
+                    </button>
+                    <button class="publish">
+                        <label for="publicar">Publicar</label>
+                        <div class="tooltip">Publicar</div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="js/components.js"></script>
+    <script>
+      function customizeBreadcrumbs() {
+        const bc = document.querySelector('.breadcrumbs ol');
+        if (!bc) return;
+    
+        bc.innerHTML = `
+          <li><a href="index.html">Inicio</a></li>
+          <li class="current" aria-current="page">Crear publicación</li>
+        `;
+      }
+    </script>
+</html>

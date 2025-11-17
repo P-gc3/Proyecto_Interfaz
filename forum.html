@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Put your description here.">
+    <title>Foro | MundoCup</title>
+
+    <link rel="stylesheet" href="css/variables.css">
+
+    <link rel="stylesheet" href="css/filter.css">
+    <link rel="stylesheet" href="css/page.css">
+    <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/forum.css">
+    <link rel="stylesheet" href="css/post.css">
+    <link rel="stylesheet" href="css/header.css"> 
+    <link rel="stylesheet" href="css/accessibility.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div id="header-placeholder"></div>
+    <div id="sidebar-placeholder"></div>
+    <div id="breadcrumbs-placeholder"></div>
+    <div id="accessibility-placeholder"></div>
+    
+    <div class="content">
+    
+        <div class="internal-header">
+            <h1 class="internal-header-title">Foro</h1>
+        </div>
+    
+        <!-- filtor de movil-->
+        <div class="filter-toggle">
+            <input type="checkbox" id="filter-toggle-checkbox">
+            <label for="filter-toggle-checkbox" class="filter-toggle-label filter-style-b">
+                Ver filtros
+                <img src="Images/Icons/next.svg" class="filter-toggle-icon" alt="Desplegar">
+            </label>
+        
+            <div class="filter-panel">
+                <aside class="forum-sidebar">
+                    <h2 class="filter-title">Filtros</h2>
+                
+                    <ul class="filter-list">
+                    
+                        <li>
+                            <input type="checkbox" id="mobile-filter-mundial" class="filter-collapse-checkbox">
+                            <label class="filter-collapse-label" for="mobile-filter-mundial">
+                                Mundial
+                                <img src="Images/Icons/next.svg" alt="Desplegar" >
+                            </label>
+                        
+                            <ul class="filter-options">
+                                <li><label class="filter-option"><input type="radio" name="mundial"> Qatar 2022</label></li>
+                                <li><label class="filter-option"><input type="radio" name="mundial"> Rusia 2018</label></li>
+                            </ul>
+                        </li>
+                    
+                        <li>
+                            <input type="checkbox" id="mobile-filter-categoria" class="filter-collapse-checkbox">
+                            <label class="filter-collapse-label" for="mobile-filter-categoria">
+                                Categoría
+                                <img src="Images/Icons/next.svg" alt="Desplegar" >
+                            </label>
+                        
+                            <ul class="filter-options">
+                                <li><label class="filter-option"><input type="checkbox"> Entrevistas</label></li>
+                                <li><label class="filter-option"><input type="checkbox"> Leyendas</label></li>
+                                <li><label class="filter-option"><input type="checkbox"> Estadísticas</label></li>
+                            </ul>
+                        </li>
+                    
+                        <li>
+                            <input type="checkbox" id="mobile-filter-pais" class="filter-collapse-checkbox">
+                            <label class="filter-collapse-label" for="mobile-filter-pais">
+                                País sede
+                                <img src="Images/Icons/next.svg" alt="Desplegar" >
+                            </label>
+                        
+                            <ul class="filter-options">
+                                <li><label class="filter-option"><input type="checkbox"> Qatar 🇶🇦</label></li>
+                                <li><label class="filter-option"><input type="checkbox"> Rusia 🇷🇺</label></li>
+                                <li><label class="filter-option"><input type="checkbox"> Brasil 🇧🇷</label></li>
+                                <li><label class="filter-option"><input type="checkbox"> Sudáfrica 🇿🇦</label></li>
+                            </ul>
+                        </li>
+                    
+                        <li>
+                            <input type="checkbox" id="mobile-filter-usuario" class="filter-collapse-checkbox" /><label class="filter-collapse-label" for="mobile-filter-usuario">
+                                Usuario
+                                <img src="Images/Icons/next.svg" alt="Desplegar" >
+                            </label>
+                            
+                            <ul class="filter-options">
+                                <li style="padding: 8px 0;">
+                                    <input type="text" class="filter-user-input" placeholder="@usuario">
+                                </li>
+                            </ul>
+                        </li>
+
+
+                    
+                    </ul>
+                
+                    <button class="filter-apply-button">Filtrar</button>
+                </aside>
+            </div>
+        </div>
+
+    
+        <!-- contenido y filtro desk-->
+        <div class="forum">
+            <div class="forum-grid">
+            
+                <main class="forum-main">
+                
+                    <article class="post">
+                        <header class="post-header">
+                            <div class="post-author">
+                                <img class="post-avatar" src="Images/Community/Mads.jpg" alt="img post-avatar">
+                                <span>@MadsMikkelsen</span>
+                            </div>
+                            <div class="post-meta-left"> Leyendas del fútbol</div>
+                            <time class="post-time">26 Oct 2025</time>
+                        </header>
+                    
+                        <div class="post-content">
+                            <p>Un mito de la portería.</p>
+                            <img src="Images/Trending/publicacion2.jpg" alt="publicacion">
+                        </div>
+                        <footer class="post-footer">
+                            <div class="post-actions">
+                                <button class="post-action">
+                                    <img src="Images/Icons/like.svg" alt="Like" class="post-action-icon" alt="" aria-hidden="true">
+                                    <span class="post-action-count">33</span>
+                                </button>
+                            
+                                <button class="post-action">
+                                    <img src="Images/Icons/comment.svg" alt="Comentarios" class="post-action-icon" >
+                                    <span class="post-action-count">752</span>
+                                </button>
+                            </div>
+                            <div class="post-comment-input">
+                                <input type="text" placeholder="Escribe un comentario...">
+                            </div>
+                        </footer>
+                    </article>
+
+                    <article class="post">
+                        <header class="post-header">
+                            <div class="post-author">
+                                <img class="post-avatar" src="Images/Community/Meryl.jpg" alt="img post-avatar">
+                                <span>@MerylStreep</span>
+                            </div>
+                            <div class="post-meta-left"> Estadísticas</div>
+                            <time class="post-time">03 Sep 2025</time>
+                        </header>
+                    
+                        <div class="post-content">
+                            <p>Pronósticos J13 Liga Mx</p>
+                            <img src="Images/Trending/estadisticas1.jpg" alt="publicacion">
+                        </div>
+                        <footer class="post-footer">
+                            <div class="post-actions">
+                                <button class="post-action">
+                                    <img src="Images/Icons/like.svg" alt="Like" class="post-action-icon">
+                                    <span class="post-action-count">999999</span>
+                                </button>
+                            
+                                <button class="post-action">
+                                    <img src="Images/Icons/comment.svg" alt="Comentarios" class="post-action-icon">
+                                    <span class="post-action-count">5</span>
+                                </button>
+                            </div>
+                            <div class="post-comment-input">
+                                <input type="text" placeholder="Escribe un comentario...">
+                            </div>
+                        </footer>
+                    </article>
+
+                    <article class="post">
+                        <header class="post-header">
+                            <div class="post-author">
+                                <img class="post-avatar" src="Images/Community/Meryl.jpg" alt="img post-avatar">
+                                <span>@MerylStreep</span>
+                            </div>
+                            <div class="post-meta-left"> Leyendas del fútbol</div>
+                            <time class="post-time">12 Oct 2025</time>
+                        </header>
+                    
+                        <div class="post-content">
+                            <p>12 de octubre de 1996. En el Estadio de San Lázaro, Ronaldo Nazário anota su mejor gol con la camiseta del FC Barcelona ante la SD Compostela. Bobby Robson no se lo podía creer. Una icónica obra maestra.</p>
+                            <img src="Images/Trending/publicacion1.png" alt="publicacion">
+                        </div>
+                        <footer class="post-footer">
+                            <div class="post-actions">
+                                <button class="post-action">
+                                    <img src="Images/Icons/like.svg" alt="Like" class="post-action-icon">
+                                    <span class="post-action-count">999</span>
+                                </button>
+                            
+                                <button class="post-action">
+                                    <img src="Images/Icons/comment.svg" alt="Comentarios" class="post-action-icon">
+                                    <span class="post-action-count">2</span>
+                                </button>
+                            </div>
+                            <div class="post-comment-input">
+                                <input type="text" placeholder="Escribe un comentario...">
+                            </div>
+                        </footer>
+                    </article>
+
+                    
+                    <article class="post">
+                        <header class="post-header">
+                            <div class="post-author">
+                                <img class="post-avatar" src="Images/Community/Mads.jpg" loading="lazy" alt="img post-avatar">
+                                <span>@MadsMikkelsen</span>
+                            </div>
+                            <div class="post-meta-left"> Qatar 2022 • Estadisticas</div>
+                            <time class="post-time">02 Oct 2025</time>
+                        </header>
+                    
+                        <div class="post-content">
+                            <p>El mundial de Qatar 2022, en graficos</p>
+                            <img src="Images/Trending/stats.jpg" loading="lazy" alt="publicacion">
+                        </div>
+                        <footer class="post-footer">
+                            <div class="post-actions">
+                                <button class="post-action">
+                                    <img src="Images/Icons/like.svg" alt="Like" class="post-action-icon" >
+                                    <span class="post-action-count">2</span>
+                                </button>
+                            
+                                <button class="post-action">
+                                    <img src="Images/Icons/comment.svg" alt="Comentarios" class="post-action-icon">
+                                    <span class="post-action-count">7</span>
+                                </button>
+                            </div>
+                            <div class="post-comment-input">
+                                <input type="text" placeholder="Escribe un comentario...">
+                            </div>
+                        </footer>
+                    </article>
+                    <article class="post">
+                        <header class="post-header">
+                            <div class="post-author">
+                                <img class="post-avatar" src="Images/Community/Meryl.jpg" loading="lazy" alt="img post-avatar">
+                                <span>@MerylStreep</span>
+                            </div>
+                            <div class="post-meta-left"> Qatar 2022 • Leyendas del fútbol• Brasil</div>
+                            <time class="post-time">05 Oct 2025</time>
+                        </header>
+                    
+                        <div class="post-content">
+                            <p>Woow, que tremendo el gol.</p>
+                            <img src="Images/Trending/Milla.jpg" loading="lazy" alt="publicacion">
+                        </div>
+                        <footer class="post-footer">
+                            <div class="post-actions">
+                                <button class="post-action">
+                                    <img src="Images/Icons/like.svg" alt="Like" class="post-action-icon">
+                                    <span class="post-action-count">123</span>
+                                </button>
+                            
+                                <button class="post-action">
+                                    <img src="Images/Icons/comment.svg" alt="Comentarios" class="post-action-icon"  >
+                                    <span class="post-action-count">45</span>
+                                </button>
+                            </div>
+                            <div class="post-comment-input">
+                                <input type="text" placeholder="Escribe un comentario...">
+                            </div>
+                        </footer>
+                    </article>
+
+                    <article class="post">
+                        <header class="post-header">
+                            <div class="post-author">
+                                <img class="post-avatar" src="Images/Community/Mads.jpg" loading="lazy" alt="img post-avatar">
+                                <span>@MadsMikkelsen</span>
+                            </div>
+                            <div class="post-meta-left"> Brasil 2014 • Entrevistas • Alemania</div>
+                            <time class="post-time">15 Oct 2025</time>
+                        </header>
+                    
+                        <div class="post-content">
+                            <p>Entrevisté a Thomas MULLER!!!</p>
+                            <img src ="Images/Trending/Muller.png" alt="publi muller" loading="lazy">
+                        </div>
+                        <footer class="post-footer">
+                            <div class="post-actions">
+                                <button class="post-action">
+                                    <img src="Images/Icons/like.svg" alt="Like" class="post-action-icon">
+                                    <span class="post-action-count">1983</span>
+                                </button>
+                            
+                                <button class="post-action">
+                                    <img src="Images/Icons/comment.svg" alt="Comentarios" class="post-action-icon"  >
+                                    <span class="post-action-count">83</span>
+                                </button>
+                            </div>
+                            <div class="post-comment-input">
+                                <input type="text" placeholder="Escribe un comentario...">
+                            </div>
+                        </footer>
+                    </article>
+
+                    <article class="post">
+                        <header class="post-header">
+                            <div class="post-author">
+                                <img class="post-avatar" src="Images/Community/Mads.jpg" loading="lazy" alt="img post-avatar">
+                                <span>@MadsMikkelsen</span>
+                            </div>
+                            <div class="post-meta-left"> Inglaterra • Archivos de aficionados</div>
+                            <time class="post-time">4 Oct 2025</time>
+                        </header>
+                    
+                        <div class="post-content">
+                            <p>GO ENGLAND</p>
+                            <img src="Images/Trending/Inglaterra.jpg" alt="publicacion">
+                        </div>
+                        <footer class="post-footer">
+                            <div class="post-actions">
+                                <button class="post-action">
+                                    <img src="Images/Icons/like.svg" alt="Like" class="post-action-icon" >
+                                    <span class="post-action-count">3</span>
+                                </button>
+                            
+                                <button class="post-action">
+                                    <img src="Images/Icons/comment.svg" alt="Comentarios" class="post-action-icon"  >
+                                    <span class="post-action-count">9999</span>
+                                </button>
+                            </div>
+                            <div class="post-comment-input">
+                                <input type="text" placeholder="Escribe un comentario...">
+                            </div>
+                        </footer>
+                    </article>
+
+                    <article class="post">
+                        <header class="post-header">
+                            <div class="post-author">
+                                <img class="post-avatar" src="Images/Community/Meryl.jpg" alt="img post-avatar" >
+                                <span>@MerylStreep</span>
+                            </div>
+                            <div class="post-meta-left">Archivos de aficionados</div>
+                            <time class="post-time">27 octubre 2025</time>
+                        </header>
+                    
+                        <div class="post-content">
+                            <p>¿Qué opinan del año de Maradona en el Sevilla?</p>
+                            <img src="Images/Trending/maradona.jpg" alt="publicacion">
+                        </div>
+                        <footer class="post-footer">
+                            <div class="post-actions">
+                                <button class="post-action">
+                                    <img src="Images/Icons/like.svg" alt="Like" class="post-action-icon" loading="lazy" >
+                                    <span class="post-action-count">987</span>
+                                </button>
+                            
+                                <button class="post-action">
+                                    <img src="Images/Icons/comment.svg" alt="Comentarios" class="post-action-icon"  >
+                                    <span class="post-action-count">321</span>
+                                </button>
+                            </div>
+                            <div class="post-comment-input">
+                                <input type="text" placeholder="Escribe un comentario...">
+                            </div>
+                        </footer>
+                    </article>
+                
+                </main>
+            
+                <!-- filtro desk -->
+                <aside class="forum-sidebar sidebar-desktop">
+                
+                    <h2 class="filter-title">Filtros</h2>
+                
+                    <ul class="filter-list">
+                    
+                        <li>
+                            <input type="checkbox" id="desk-filter-mundial" class="filter-collapse-checkbox">
+                            <label class="filter-collapse-label" for="desk-filter-mundial">
+                                Mundial
+                                <img src="Images/Icons/next.svg" alt="Desplegar">
+                            </label>
+                        
+                            <ul class="filter-options">
+                                <li><label class="filter-option"><input type="radio" name="desk-mundial"> Qatar 2022</label></li>
+                                <li><label class="filter-option"><input type="radio" name="desk-mundial"> Rusia 2018</label></li>
+                            </ul>
+                        </li>
+                    
+                        <li>
+                            <input type="checkbox" id="desk-filter-categoria" class="filter-collapse-checkbox">
+                            <label class="filter-collapse-label" for="desk-filter-categoria">
+                                Categoría
+                                <img src="Images/Icons/next.svg" alt="Desplegar">
+                            </label>
+                        
+                            <ul class="filter-options">
+                                <li><label class="filter-option"><input type="checkbox"> Entrevistas</label></li>
+                                <li><label class="filter-option"><input type="checkbox"> Leyendas</label></li>
+                                <li><label class="filter-option"><input type="checkbox"> Estadísticas</label></li>
+                            </ul>
+                        </li>
+                    
+                        <li>
+                            <input type="checkbox" id="desk-filter-pais" class="filter-collapse-checkbox">
+                            <label class="filter-collapse-label" for="desk-filter-pais">
+                                País sede
+                                <img src="Images/Icons/next.svg" alt="Desplegar">
+                            </label>
+                        
+                            <ul class="filter-options">
+                                <li><label class="filter-option"><input type="checkbox"> Qatar 🇶🇦</label></li>
+                                <li><label class="filter-option"><input type="checkbox"> Rusia 🇷🇺</label></li>
+                                <li><label class="filter-option"><input type="checkbox"> Brasil 🇧🇷</label></li>
+                                <li><label class="filter-option"><input type="checkbox"> Sudáfrica 🇿🇦</label></li>
+                            </ul>
+                        </li>
+                    
+                        <li>
+                            <input type="checkbox" class="filter-collapse-checkbox" id="desk-filter-usuario">
+                            <label class="filter-collapse-label" for="desk-filter-usuario">
+                                Usuario
+                                <img src="Images/Icons/next.svg" alt="Desplegar">
+                            </label>
+                        
+                            <ul class="filter-options">
+                                <li style="padding: 8px 0;">
+                                    <input type="text" class="filter-user-input" placeholder="@usuario">
+                                </li>
+                            </ul>
+                        </li>
+                    
+                    </ul>
+                
+                    <button class="filter-apply-button">Filtrar</button>
+                
+                </aside>
+
+            
+            </div>
+        </div>
+    
+    </div>
+    <script src="js/components.js"></script>
+    <script>
+      function customizeBreadcrumbs() {
+        const bc = document.querySelector('.breadcrumbs ol');
+        if (!bc) return;
+    
+        bc.innerHTML = `
+          <li><a href="index.html">Inicio</a></li>
+          <li class="current" aria-current="page">Foro</li>
+        `;
+      }
+    </script>
+</body>
+</html>
