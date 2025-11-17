@@ -1,0 +1,172 @@
+<div class="header">
+    <div class="header-left">
+        <button class="menu-button" aria-label="Menú">
+            <img src="Images/Icons/burger.svg" class="icon" alt="" aria-hidden="true">
+            <div class="header-left-tooltip" aria-hidden="true">
+                Abrir menú
+            </div>
+        </button>
+        <a href="index.html">
+            <img src="Images/logo.svg" class="MiLotero-logo" alt="icon logo">
+        </a>
+    </div>
+    <div class="search-wrapper">
+        <div class="search">
+            <input type="text" placeholder="Buscar..." class="search-input">
+            <div class="search-results">
+                <div class="search-results-scrollable"> <!-- Se ocupa otro div para esto, si no incluye la barra de  busqueda -->
+                    <ul class="recent-searches">
+                        <li>
+                            
+                            <div class="recent-search-value">
+                                <a href ="worldcup.html">Mundial Qatar 2022</a>
+                            </div>
+                            <button class="recent-search-remove">
+                                <svg class="delete-icon" viewBox="0 0 24 24">   <line x1="18" y1="6" x2="6" y2="18"></line>   <line x1="6" y1="6" x2="18" y2="18"></line> </svg>
+                            </button>
+                        </li>
+                        <li>
+                            <div class="recent-search-value">
+                                Mundial Rusia 2018
+                            </div>
+                            <button class="recent-search-remove">
+                                <svg class="delete-icon" viewBox="0 0 24 24">   <line x1="18" y1="6" x2="6" y2="18"></line>   <line x1="6" y1="6" x2="18" y2="18"></line> </svg>
+                            </button>
+                        </li>
+                        <li>
+                            <div class="recent-search-value">
+                                Mundial Brasil 2014
+                            </div>
+                            <button class="recent-search-remove">
+                                <svg class="delete-icon" viewBox="0 0 24 24">   <line x1="18" y1="6" x2="6" y2="18"></line>   <line x1="6" y1="6" x2="18" y2="18"></line> </svg>
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="trending-today">
+                        <div class="trending-today-header">
+                            <img src="Images/Icons/trending.svg" 
+                            class= "trending-today-icon" alt="Flecha hacia arriba">
+                            <span class="trending-today-title">
+                                En tendencia
+                            </span>
+                        </div>
+                        <ul class="trending-today-items">
+                            <li class="trending-today-item">
+                                <div class="trending-today-item-info">
+                                    <div class="trending-today-item-title">
+                                        El incombustible Milla hace historia
+                                    </div>
+                                    <div class="trending-today-item-description">
+                                        Recordando al goleador más veterano de la historia de la competición.
+                                    </div>
+                                    <div class="trending-today-item-source">
+                                        <img src="Images/Community/Meryl.jpg">
+                                        <span>
+                                            @MerylStreep
+                                        </span>
+                                    </div>
+                                </div>
+                                <img src="Images/Trending/Milla.jpg" class="trending-today-item-preview" alt="Foto">
+                            </li>
+                            <li class="trending-today-item">
+                                <div class="trending-today-item-info">
+                                    <div class="trending-today-item-title">
+                                        Inglaterra clasifica mientras Ronaldo establece un nuevo récord
+                                    </div>
+                                    <div class="trending-today-item-description">
+                                        Harry Kane marcó el gol que dio a los Tres Leones el pase al Mundial 26, 
+                                        mientras que Ronaldo estableció otro récord.
+                                    </div>
+                                    <div class="trending-today-item-source">
+                                        <img src="Images/Community/Logan.jpg">
+                                        <span>
+                                            @LoganRoy
+                                        </span>
+                                    </div>
+                                </div>
+                                <img src="Images/Trending/Inglaterra.jpg" class="trending-today-item-preview" alt="Foto">
+                            </li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ul class="header-actions">
+        <li class="header-action search-icon">
+            <button type="button" data-toggle-search>
+                <img src="Images/search.svg" alt="Buscar">
+                <div class="header-action-tooltip">Buscar</div>
+            </button>
+        </li>
+    </ul>
+    <ul class="header-actions">
+        <li class="header-action">
+            <button>
+                <a href="create-post.html">
+                <img src="Images/Icons/create-post.svg" alt="Crear publicación"></a>
+                <div class="header-action-tooltip">
+                    Crear publicación
+                </div>
+            </button>
+        </li>
+        <li class="header-action">
+            <input type="checkbox" class="profile-menu-visibility" id="profile-menu-visibility-checkbox"/>
+            <button class="profile-menu-button">
+                <label for="profile-menu-visibility-checkbox"
+                    class="header-action-profile-label">
+                    <img src="Images/Icons/user.svg" alt="Perfil">
+                </label>
+                <div class="header-action-tooltip">
+                    Perfil
+                </div>
+            </button>
+            <ul class="profile-menu">
+
+                <li class="profile-menu-item">
+                    <a href="profile.html" class="profile-menu-link">
+                        <div class="profile-menu-item-left">
+                            <div class="profile-menu-item-title">
+                                Mi perfil
+                            </div>
+                        </div>
+                        <div class="profile-menu-item-right">
+                            <img class="profile-menu-item-icon" src="Images/Icons/next.svg"  class="profile-menu-item-next" alt="siguiente">
+                        </div>
+                    </a>
+                </li>
+
+                <li class="profile-menu-item">
+                    <a href="admin.html" class="profile-menu-link">
+                        <div class="profile-menu-item-left">
+                            <div class="profile-menu-item-title">
+                                Panel de administración
+                            </div>
+                        </div>
+                        <div class="profile-menu-item-right">
+                            <img class="profile-menu-item-icon" src="Images/Icons/next.svg" alt="siguiente">
+                        </div>
+                    </a>
+                </li>
+                
+                <li class="profile-menu-item">
+                    <a href="categories.html" class="profile-menu-link">
+                        <div class="profile-menu-item-left">
+                            <div class="profile-menu-item-title">
+                                Administrar categorías
+                            </div>
+                        </div>
+                        <div class="profile-menu-item-right">
+                            <img class="profile-menu-item-icon" src="Images/Icons/next.svg" alt="siguiente">
+                        </div>
+                    </a>
+                </li>
+
+                <li class="profile-menu-item profile-menu-item-logout">
+                    <button type="button" class="profile-menu-logout-button" aria-label="Cerrar sesión">
+                        Cerrar sesión
+                    </button>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
