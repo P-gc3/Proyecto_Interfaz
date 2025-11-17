@@ -1,0 +1,181 @@
+.footer {
+  background-color: var(--verde-Primario);
+  color: var(--blanco-TextoYSolido);
+  text-align: left;
+  padding: 2rem;
+  font-size: 0.9rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* /////////////////////columna izq logo y asi///////////*/
+.footer-left {
+  flex: 1 1 300px;
+}
+
+.footer-logo {
+  width: 120px;
+  margin-bottom: 1rem;
+}
+
+.footer-left p {
+  line-height: 0.2;
+  font-size: 1rem;
+}
+
+/*////info derecha////////*/
+.footer-right {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 4rem;
+}
+
+.footer-info h4 {
+  font-size: 1.1rem;
+  color: var(--blanco-TextoYSolido);
+  margin-bottom: 0.8rem;
+}
+
+.footer-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-info li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-info a {
+  color: var(--blanco-TextoYSolido);
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.footer-info a:hover {
+  opacity: 1;
+  color: var(--verde-Acento);
+}
+
+
+/* /////////////////salto de linea*/
+.footer hr {
+  margin: 2rem 0 1.5rem;
+  border: 0;
+  height: 1px;
+  background-color: var(--verde-Acento);
+}
+
+/*/////////////////derechos de autor xd////////*/
+.footer-bottom {
+  text-align: center;
+}
+
+/*///////para acomodar redes sociales////////*/
+.social-info {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 1rem;
+}
+
+.redes h3 {
+  margin-top: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 20rem; 
+  align-items: center;
+}
+
+.social-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+}
+
+.social-item a {
+  color: var(--blanco-TextoYSolido);
+  text-decoration: none;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-item a:hover {
+  color: var(--verde-Acento);
+  transform: translateY(-3px);
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0.3rem;
+  cursor: pointer;
+}
+
+/* nombre debajo del icono*/
+.social::after {
+  content: attr(data-name);
+  position: absolute;
+  top: 58px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.75rem;
+  color: var(--blanco-TextoYSolido);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/*texto al hacer hover */
+.social:hover::after {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+/* efecto hover en íconos */
+.social:hover {
+  color: var(--verde-Acento);
+  transform: translateY(-3px);
+}
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 1.5rem;
+    font-size: 0.85rem;
+  }
+
+  .footer-logo {
+    width: 100px;
+  }
+
+  .social-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .footer-info h4 {
+    font-size: 1rem;
+  }
+
+  .footer-left p {
+    line-height: 1.5;
+    font-size: 1rem;
+    opacity: 0.9;
+    max-width: 400px; /* para q el texto no se extienda tanto */
+    margin: 0.5rem 0 0;
+  }
+
+  .footer hr {
+    margin: 1.5rem 0;
+  }
+}

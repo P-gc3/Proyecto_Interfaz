@@ -1,0 +1,174 @@
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin-top: 90px; /* espacio por el header fijo */
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
+}
+
+.slide-info {
+  position: absolute;
+  bottom: 15%;
+  left: 8%;
+  color: var(--blanco-TextoYSolido);
+}
+
+.slide-info h2 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.slide-info p {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-top: 0.5rem;
+}
+
+/*///////////////////////botones del carrusel///////////*/
+.carousel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--page-text);
+  border: none;
+  color: var(--verde-Acento);
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 2;
+  transition: background-color 0.3s;
+}
+
+.carousel button:hover {
+  background-color: var(--verde-Primario);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/*////////////destacadaaas/////////*/
+.featured-posts {
+  padding: 3rem 2rem;
+}
+
+.featured-posts h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.category {
+  margin-bottom: 3rem;
+}
+
+.category h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--negro-azulado-Texto);
+}
+
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.post-card {
+  background: var(--verde-Primario);
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--blanco-TextoYSolido);
+  transition: transform 0.3s, box-shadow 0.3s;
+  
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px var(--page-text)
+}
+
+.post-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.post-card h4 {
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+
+/*//////FAQ////////////*/
+/*cada tarjetita de pregunta*/
+.faq {
+  color: var(--negro-azulado-Texto);
+  padding: 4rem 2rem;
+  border-top: 1px solid var(--verde-Acento);
+}
+
+.faq h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: var(--verde-Acento);
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+  
+}
+
+.faq details {
+  background: var(--blanco-mas-claro-Hover);
+  border: 1px solid var(--verde-Acento);
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  transition: background 0.4s;
+}
+
+.faq details:hover {
+  background: var(--verde-Hover);
+}
+
+.faq summary {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.faq p {
+  margin-top: 0.8rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+

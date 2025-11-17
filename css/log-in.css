@@ -1,0 +1,279 @@
+/*/////////////////general/////////*/
+body {
+  background-color: var(--verde-Primario);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.login-exit {
+  position: absolute;
+  top: 3rem;
+  left: 5rem;
+}
+
+.login-exit a {
+  text-decoration: none;
+  color: var(--negro-azulado-Texto);
+  font-size: 1.5rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.login-exit a:hover {
+  color: var(--verde-Acento);
+}
+
+.login-container {
+  display: flex;
+  width: 900px;
+  max-width: 95%;
+  background-color: var(--blanco-mas-claro-Fondo);
+  border: 1px solid var(--verde-Acento);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/*/////////////columna izq logo//////////*/
+.login-info {
+  flex: 1;
+  background-color: var(--gris-Oscuro);
+  color: var(--blanco-TextoYSolido);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+/*era el titulo de la pagina, pero pensé q era rebundante pq ya estaba el logo, lo dejo por si acaso*/
+.login-info h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.login-image {
+  width: 100%;
+  height: 120px;
+  background-color: var(--verde-Primario);
+  border: 1px solid var(--page-text);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.login-image img {
+  width: 80%;
+  height: 80%;
+  object-fit:contain;
+}
+
+/*////////////columna der-form////////////*/
+.login-form {
+  flex: 1;
+  padding: 2.5rem;
+  background-color: var(--page-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form form {
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+  
+}
+
+.input-group input {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--verde-Acento);
+  border-radius: 4px;
+  background-color: var(--page-bg);
+  color: var(--negro-azulado-Texto);
+  font-size: 0.95rem;
+}
+
+.input-group input::placeholder {
+  color: var(--gris-Medio);
+}
+
+.forgot-link {
+  align-self: flex-end;
+  font-size: 0.8rem;
+  color: var(--verde-Acento);
+  margin-top: 0.3rem;
+  text-decoration: none;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0.8rem 0 1.2rem;
+  font-size: 0.9rem;
+}
+
+.checkbox-group input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--verde-Acento);
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+
+.btn {
+  border: none;
+  border-radius: 5px;
+  padding: 0.7rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn.primary {
+  background-color: var(--verde-Primario);
+  color: var(--blanco-TextoYSolido);
+}
+
+.btn.primary:hover {
+  background-color: var(--verde-Acento);
+}
+
+.btn.secondary {
+  background-color: var(--gris-Claro);
+  color: var(--page-text);
+  border: 2px solid var(--borde-create-post)
+}
+
+.btn.btn.secondary a{
+    color: var(--page-text);
+    text-decoration: none;
+}
+
+.btn.secondary:hover {
+  background-color: var(--verde-Acento);
+  transition: background 0.4s;
+}
+
+
+.divider {
+  text-align: center;
+  margin: 0.8rem 0;
+  font-size: 0.9rem;
+  opacity: 0.6;
+}
+
+.password-field {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-field input {
+    width: 100%;
+    padding-right: 42px; /
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity .2s ease;
+}
+
+.toggle-password:hover {
+    opacity: 1;
+}
+
+body.dark-mode .toggle-password {
+    filter: invert(1);
+}
+
+@media (max-width: 600px) {
+  body {
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .login-container {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 4rem;
+    border-radius: 8px;
+  }
+
+  .login-info {
+    padding: 1.2rem;
+  }
+
+  .login-image {
+    height: 120px;
+    border: none;
+  }
+
+  .login-image img {
+    width: 70%;
+    height: auto;
+  }
+
+  .login-form {
+    padding: 1.2rem;
+  }
+
+  .login-form form {
+    width: 100%;
+  }
+
+  .input-group input {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  .checkbox-group {
+    font-size: 0.85rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  .login-exit {
+    top: 1.5rem;
+    left: 1rem;
+  }
+
+  .login-exit a {
+    font-size: 1.2rem;
+  }
+}

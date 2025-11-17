@@ -1,0 +1,227 @@
+#accessibility-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 54px;
+  height: 54px;
+  border: none;
+  border-radius: 50%;
+  background: var(--verde-Accse);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  cursor: pointer;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s, transform 0.2s;
+}
+
+#accessibility-btn:hover {
+  background: var(--verde-Hover);
+  transform: scale(1.05);
+}
+
+#accessibility-btn img {
+  width: 28px;
+  height: 28px;
+}
+
+
+.accessibility-popup {
+  position: fixed;
+  bottom: 100px;
+  right: 24px;
+  width: 260px;
+  background: var(--blanco-mas-claro-Fondo);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  transition: 0.25s ease;
+  z-index: 9999;
+}
+
+
+.accessibility-popup.open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.accessibility-popup[aria-hidden="true"] {
+  display: none;
+}
+
+.accessibility-popup-inner h3 {
+  margin: 0 0 12px 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--negro-azulado-Texto);
+}
+
+
+.accessibility-section {
+  margin-bottom: 16px;
+}
+
+.accessibility-section:last-child {
+  margin-bottom: 0;
+}
+
+.accessibility-section p {
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  color: var(--gris-azulado-oscuro-Texto);
+}
+
+
+.font-size-controls button,
+.colorblind-controls button,
+#toggle-keyboard-nav,
+.tts-controls button {
+  padding: 8px 10px;
+  background: var(--blanco-Hover);
+  border: 1px solid var(--verde-Acento);
+  border-radius: 8px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: 0.2s ease;
+  color: var(--negro-azulado-Texto);
+}
+
+.font-size-controls button:hover,
+.colorblind-controls button:hover,
+#toggle-keyboard-nav,
+.tts-controls button {
+  background: var(--verde-Hover);
+  color: white;
+}
+
+.font-size-controls {
+  display: flex;
+  gap: 8px;
+}
+
+
+@media (max-width: 480px) {
+
+  #accessibility-btn {
+    bottom: 14px;
+    right: 14px;
+    width: 48px;
+    height: 48px;
+  }
+
+  #accessibility-btn img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .accessibility-popup {
+    bottom: 72px;
+    right: 14px;
+    width: calc(100vw - 65px);
+    max-width: none;
+    transform: translateY(20px); 
+  }
+
+  .accessibility-popup.open {
+    transform: translateY(0);
+  }
+}
+
+.colorblind-controls button {
+  margin: 6px 0;      
+  padding: 8px 12px;  
+  border-radius: 6px; 
+}
+
+
+.color-blind-protanopia {
+  --verde-Primario: #4B6EAF;
+  --verde-Accse: #4B6EAF;
+  --verde-Acento: #355A99;
+
+  --negro-azulado-Texto: #1A1A1A;
+  --gris-azulado-oscuro-Texto: #2A2A2A;
+
+  --blanco-mas-claro-Fondo: #F8F8F8;
+  --blanco-mas-claro-Hover: #EEEEEE;
+
+  --verde-Hover: #547CBD;
+}
+
+.color-blind-deuteranopia {
+  --verde-Primario: #5677A3;
+  --verde-Accse: #5677A3;
+  --verde-Acento: #3E5D87;
+
+  --negro-azulado-Texto: #1A1A1A;
+  --gris-azulado-oscuro-Texto: #2A2A2A;
+
+  --blanco-mas-claro-Fondo: #F7F7F7;
+  --blanco-mas-claro-Hover: #EDEDED;
+
+  --verde-Hover: #5F84B2;
+}
+
+.color-blind-tritanopia {
+  --verde-Primario: #8A7F36;
+  --verde-Accse: #8A7F36;
+  --verde-Acento: #726A2C;
+
+  --negro-azulado-Texto: #1C1C1C;
+  --gris-azulado-oscuro-Texto: #2C2C2C;
+
+  --blanco-mas-claro-Fondo: #FAFAFA;
+  --blanco-mas-claro-Hover: #EFEFEF;
+
+  --verde-Hover: #988C3F;
+}
+
+:focus {
+  outline: 3px solid #ffcb05 !important;
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+
+.post-card:focus,
+.sidebar-link:focus,
+.filter-option:focus,
+.header-action:focus,
+.profile-menu-item:focus {
+  outline: 3px solid #ffcb05 !important;
+}
+
+*:focus {
+  outline: 3px solid var(--accesibilidad-Foco, #FFB400) !important;
+  outline-offset: 4px !important;
+}
+
+.tts-controls {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+/*
+.tts-controls button {
+  padding: 8px 14px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: none;
+  background: var(--verde-Primario);
+  color: white;
+  cursor: pointer;
+}
+
+.tts-controls button:hover {
+  background: var(--verde-Hover);
+}*/
+
+.tts-highlight {
+  background-color: rgba(255, 230, 150, 0.7);
+  transition: background-color 0.2s ease;
+}
+

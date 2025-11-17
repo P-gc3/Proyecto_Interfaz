@@ -1,0 +1,640 @@
+.worldcup-page {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 16px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* heor */
+
+.worldcup-hero {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--search-Sombra);
+}
+
+.worldcup-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.worldcup-hero-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 8px;
+    padding: 20px 24px 24px;
+    background: linear-gradient(
+        180deg,
+        rgba(0,0,0,0.15) 0%,
+        rgba(0,0,0,0.55) 50%,
+        rgba(0,0,0,0.85) 100%
+    );
+    color: #fff;
+}
+
+.worldcup-hero-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.worldcup-logo {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+}
+
+.worldcup-hero-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.tag-chip {
+    background: rgba(0,0,0,0.4);
+    border-radius: 999px;
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    border: 1px solid rgba(255,255,255,0.35);
+}
+
+.worldcup-title {
+    font-size: 1.9rem;
+    margin: 4px 0 0;
+}
+
+.worldcup-year {
+    margin: 4px 0 8px;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+.worldcup-meta-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.meta-chip {
+    background: rgba(0,0,0,0.35);
+    border-radius: 999px;
+    padding: 4px 10px;
+    font-size: 0.8rem;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+/* secciones generales */
+
+.worldcup-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.worldcup-section > h2 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: var(--negro-azulado-Texto);
+}
+
+/* crad */
+
+.worldcup-card {
+    background: var(--blanco-Cuerpos);
+    border-radius: 16px;
+    border: 1px solid var(--blanco-Bordes);
+    box-shadow: var(--search-Sombra);
+    padding: 16px 18px;
+}
+
+/* intro */
+
+.worldcup-intro p {
+    line-height: 1.7;
+    color: var(--negro-azulado-Texto);
+    max-width: 900px;
+}
+
+/* grid y dtaos y dveod */
+
+.worldcup-content-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 24px;
+}
+
+.worldcup-data-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.worldcup-data-list li {
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+}
+
+.worldcup-data-list li strong {
+    font-weight: 600;
+}
+
+.worldcup-media-text {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: var(--negro-azulado-Texto);
+}
+
+.worldcup-video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; 
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.worldcup-video-wrapper iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*USAR ESTE PARA EL REEMPLAZO DE IMAGENEEES*/
+.media-image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    object-fit: cover;
+}
+/* resumen */
+
+.worldcup-summary-list {
+    list-style: disc;
+    padding-left: 18px;
+    margin: 0;
+}
+
+.worldcup-summary-list li {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    color: var(--negro-azulado-Texto);
+}
+
+/* fase final */
+
+.worldcup-knockout-card {
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+.knockout-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.knockout-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--negro-azulado-Texto);
+}
+
+.knockout-list li {
+    margin-bottom: 6px;
+}
+
+.knockout-detail {
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+/* grupos */
+
+.worldcup-groups-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.worldcup-group-card h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+.worldcup-group-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.worldcup-group-card li {
+    font-size: 0.9rem;
+    padding: 4px 0;
+    border-bottom: 1px dashed var(--blanco-Bordes);
+}
+
+.worldcup-group-card li:last-child {
+    border-bottom: none;
+}
+
+/* final y alineaicones */
+
+.final-summary-card p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--negro-azulado-Texto);
+}
+
+.final-lineups-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.lineups-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.team-lineup h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+.team-lineup ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.team-lineup li {
+    padding: 2px 0;
+}
+
+.lineups-note {
+    margin: 0;
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+/* resp */
+
+@media (max-width: 900px) {
+    .worldcup-page {
+        gap: 24px;
+        padding: 12px;
+    }
+
+    .worldcup-hero {
+        height: 240px;
+    }
+
+    .worldcup-title {
+        font-size: 1.4rem;
+    }
+
+    .worldcup-content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .worldcup-groups-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .knockout-grid,
+    .lineups-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .worldcup-groups-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .worldcup-hero {
+        height: 220px;
+    }
+}
+
+/*squad*/
+
+.worldcup-squads {
+    margin-top: 40px;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.squad-country {
+    background: var(--blanco-Cuerpos);
+    border: 1px solid var(--blanco-Bordes);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: var(--search-Sombra);
+}
+
+.squad-country h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.squad-country ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    columns: 2; 
+    column-gap: 24px;
+}
+
+.squad-country li {
+    margin-bottom: 6px;
+}
+
+@media (max-width: 800px) {
+    .squad-country ul {
+        columns: 1;
+    }
+}
+
+.squads-toggle input { display: none; }
+
+.squads-toggle-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--negro-azulado-Texto);
+}
+
+.squads-toggle-icon {
+    width: 16px;
+    transform: rotate(270deg);
+    transition: .3s ease;
+}
+
+#squads-checkbox:checked + .squads-toggle-label .squads-toggle-icon {
+    transform: rotate(90deg);
+}
+
+.squads-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .45s ease;
+}
+
+#squads-checkbox:checked ~ .squads-panel {
+    max-height: 5000px;
+}
+
+.squads-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+    margin-top: 16px;
+}
+
+.squad-card {
+    perspective: 1500px;
+}
+
+.squad-card-inner {
+    position: relative;
+    width: 100%;
+    height: 380px;
+    transform-style: preserve-3d;
+    transition: transform .6s;
+}
+
+.squad-card:hover .squad-card-inner {
+    transform: rotateY(180deg);
+}
+
+.squad-front,
+.squad-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    box-sizing: border-box; 
+}
+
+.squad-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.squad-front h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: white;
+    text-align: center;
+}
+
+
+.squad-back {
+    background: var(--blanco-Cuerpos);
+    border: 1px solid var(--blanco-Bordes);
+    padding: 16px;
+    transform: rotateY(180deg);
+    overflow-y: auto;
+}
+.squad-card {
+    perspective: 1500px;
+}
+
+.squad-card-inner {
+    position: relative;
+    width: 100%;
+    height: 380px;
+    transform-style: preserve-3d;
+    transition: transform .6s;
+}
+
+.squad-card:hover .squad-card-inner {
+    transform: rotateY(180deg);
+}
+
+.squad-front,
+.squad-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    box-sizing: border-box; 
+}
+
+.squad-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.squad-front h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 12px ;
+    background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.0));
+    color: white;
+    text-align: center;
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 0;
+}
+
+
+.squad-back {
+    background: var(--blanco-Cuerpos);
+    border: 1px solid var(--blanco-Bordes);
+    padding: 16px;
+    transform: rotateY(180deg);
+    overflow-y: auto;
+}
+.squad-card {
+    perspective: 1500px;
+}
+
+.squad-card-inner {
+    position: relative;
+    width: 100%;
+    height: 380px;
+    transform-style: preserve-3d;
+    transition: transform .6s;
+}
+
+.squad-card:hover .squad-card-inner {
+    transform: rotateY(180deg);
+}
+
+.squad-front,
+.squad-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    box-sizing: border-box; 
+}
+
+/* frente */
+.squad-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.squad-front h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: white;
+    text-align: center;
+}
+
+/* reverso */
+.squad-back {
+    background: var(--blanco-Cuerpos);
+    border: 1px solid var(--blanco-Bordes);
+    padding: 16px;
+    transform: rotateY(180deg);
+    overflow-y: auto;
+}
+
+.squad-back ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.dark-mode .squads-toggle-icon {
+    filter: invert(1);
+}
+
+.squads-group-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 32px 0 12px;
+    color: var(--negro-azulado-Texto);
+    padding-left: 4px;
+    border-left: 6px solid var(--verde-Primario);
+    
+    display: flex;
+    align-items: center;
+}
+
+/* para expandir los grupos */
+
+.squads-group-toggle {
+    display: none;
+}
+
+.squads-group-title img {
+    width: 18px;
+    transition: transform .25s ease;
+    transform: rotate(270deg);
+    margin-left: 30px;
+}
+
+.dark-mode .squads-group-title img{
+    filter: invert(1);
+}
+
+
+.squads-group-toggle:checked + .squads-group-title img {
+    transform: rotate(90deg);
+}
+
+.squads-grid {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .4s ease;
+}
+
+.squads-grid {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .45s ease;
+}
+
+.squads-group-toggle:checked + .squads-group-title + .squads-grid {
+    max-height: 5000px;
+}
+
+
